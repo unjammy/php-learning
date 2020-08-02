@@ -17,6 +17,18 @@
 		<h1><?="{$greeting}, {$name}."; ?></h1>
 		<h1><?= "What are we doing today? {$answer}?"; ?></h1>
 	</header>
+	<ul>
+		<?php foreach($toons as $toon) : ?>
+			<li><?= $toon ?></li>
+		<?php endforeach; ?>
+	</ul>
+	<ul>
+		<?php
+			foreach($toons as $toon) {
+				echo "<li>$toon</li>";
+			}
+		?>
+	</ul>
 	
 </body>
 </html>
