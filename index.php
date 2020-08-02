@@ -1,4 +1,7 @@
 <?php
-$name = 'Weevis Knievis';
-echo "Hello, $name";
-class 
+$name = 'Freeman Bernstein';
+$greeting = 'Hello';
+echo $greeting . ', ' . $name;
+echo ' ';
+echo "{$greeting}, {$name}";
+
