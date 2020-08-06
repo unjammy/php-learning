@@ -24,8 +24,8 @@
 	</ul>
 	<ul>
 		<?php
-			foreach($toons as $toon) {
-				echo "<li>$toon</li>";
+			foreach($Jinx_stats as $stat => $val) {
+				echo "<strong>$stat</strong><li>$val</li>";
 			}
 		?>
 	</ul>
