@@ -17,17 +17,34 @@
 		<h1><?="{$greeting}, {$name}."; ?></h1>
 		<h1><?= "What are we doing today? {$answer}?"; ?></h1>
 	</header>
+	<h2> Character List </h2>
 	<ul>
 		<?php foreach($toons as $toon) : ?>
 			<li><?= $toon ?></li>
 		<?php endforeach; ?>
 	</ul>
+	<h2> Character Info </h2>
 	<ul>
 		<?php
 			foreach($Jinx_stats as $stat => $val) {
 				echo "<strong>$stat</strong><li>$val</li>";
 			}
 		?>
+	</ul>
+	<h2> Quest Log </h2>
+	<ul>
+		<li>
+			<strong>Title: </strong><?= $Quest['name']; ?>
+		</li>
+		<li>
+			<strong>Objective: </strong><?= $Quest['objective']; ?>
+		</li>
+		<li>
+			<strong>Level Requirement: </strong><?= $Quest['level']; ?>
+		</li>
+		<li>
+			<strong>Available: </strong><?= $Quest['active'] ? 'Yes' : 'No'; ?>
+		</li>
 	</ul>
 	
 </body>
