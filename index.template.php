@@ -45,6 +45,14 @@
 		<li>
 			<strong>Available: </strong><?= $Quest['active'] ? 'Yes' : 'No'; ?>
 		</li>
+		<li>
+			<strong>Trivial: </strong>
+			<?php if( ($Jinx_stats['level'] - $Quest['level']) > 7 ) : ?>
+				<span class="icon">&#9989;</span>
+			<?php else : ?>
+				<span class="icon">No</span>
+			<?php endif; ?>
+		</li>
 	</ul>
 	
 </body>
