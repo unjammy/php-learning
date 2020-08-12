@@ -20,7 +20,7 @@
 	<h2> Character List </h2>
 	<ul>
 		<?php foreach($toons as $toon) : ?>
-			<li><?= $toon ?></li>
+			<li><?= ucwords($toon) ?></li>
 		<?php endforeach; ?>
 	</ul>
 	<h2> Character Info </h2>
@@ -47,11 +47,7 @@
 		</li>
 		<li>
 			<strong>Trivial: </strong>
-			<?php if( ($Jinx_stats['level'] - $Quest['level']) > 7 ) : ?>
-				<span class="icon">&#9989;</span>
-			<?php else : ?>
-				<span class="icon">No</span>
-			<?php endif; ?>
+			<?php triviality($Jinx_stats['level'], $Quest['level']); ?>
 		</li>
 	</ul>
 	

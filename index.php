@@ -1,4 +1,5 @@
 <?php
+require 'functions.php';
 $greeting = 'Hello';
 $name = 'Freeman Bernstein';
 $answer = htmlspecialchars($_GET['value']);
@@ -13,9 +14,7 @@ $Jinx_stats = [
 	'level' => 10
 ];
 $Jinx_stats['name'] = 'Jinx';
-//echo '<pre>';
-//die(var_dump($Jinx_stats));
-//echo '</pre>';
+// dd($Jinx_stats);
 unset($Jinx_stats['class']);
 $Quest = [
 	'name' => 'Rat Infestation',
