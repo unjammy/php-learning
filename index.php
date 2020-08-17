@@ -24,4 +24,25 @@ $Quest = [
 	'active' => true
 ];
 
+class Quest {
+	public $name;
+	public $active = true;
+	public function __construct($name){
+		$this->name = $name;
+	}
+	public function readQuest(){
+		return $this->active;
+	}
+	public function completeQuest(){
+		$this->active = false;
+	}
+}
+$QuestLog = [
+	new Quest('Bat Infestation'),
+	new Quest('Trouble at the Mines'),
+	new Quest('Postal Service')
+];
+$QuestLog[2]->completeQuest();
+// dd($QuestLog);
+
 require 'index.template.php';

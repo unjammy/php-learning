@@ -50,6 +50,16 @@
 			<?php triviality($Jinx_stats['level'], $Quest['level']); ?>
 		</li>
 	</ul>
+	<h4> Nearby Quests </h4>
+	<ul>
+		<?php foreach( $QuestLog as $quest ) : ?>
+			<?php if( $quest->active ) : ?>
+				<li><?= $quest->name; ?></li>
+			<?php else: ?>
+				<li><strike><?= $quest->name; ?></strike></li>
+			<?php endif; ?>
+		<?php endforeach; ?>
+	</ul>
 	
 </body>
 </html>
