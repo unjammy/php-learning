@@ -34,20 +34,20 @@
 	<h2> Quest Log </h2>
 	<ul>
 		<li>
-			<strong>Title: </strong><?= $Quest['name']; ?>
+			<strong>Title: </strong><?= $questTemplate['name']; ?>
 		</li>
 		<li>
-			<strong>Objective: </strong><?= $Quest['objective']; ?>
+			<strong>Objective: </strong><?= $questTemplate['objective']; ?>
 		</li>
 		<li>
-			<strong>Level Requirement: </strong><?= $Quest['level']; ?>
+			<strong>Level Requirement: </strong><?= $questTemplate['level']; ?>
 		</li>
 		<li>
-			<strong>Available: </strong><?= $Quest['active'] ? 'Yes' : 'No'; ?>
+			<strong>Available: </strong><?= $questTemplate['active'] ? 'Yes' : 'No'; ?>
 		</li>
 		<li>
 			<strong>Trivial: </strong>
-			<?php triviality($Jinx_stats['level'], $Quest['level']); ?>
+			<?php questLevelCheck($Jinx_stats['level'], $questTemplate['level']); ?>
 		</li>
 	</ul>
 	<h4> Nearby Quests </h4>

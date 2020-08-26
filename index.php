@@ -1,5 +1,6 @@
 <?php
 require 'functions.php';
+require 'Quest.php';
 $greeting = 'Hello';
 $name = 'Freeman Bernstein';
 $answer = htmlspecialchars($_GET['value']);
@@ -16,7 +17,7 @@ $Jinx_stats = [
 $Jinx_stats['name'] = 'Jinx';
 // dd($Jinx_stats);
 unset($Jinx_stats['class']);
-$Quest = [
+$questTemplate = [
 	'name' => 'Rat Infestation',
 	'objective' => 'Kill 8 Large Rats.',
 	'level' => '1',
@@ -24,7 +25,7 @@ $Quest = [
 	'active' => true
 ];
 
-class Quest {
+class QuestTemplate {
 	public $name;
 	public $active = true;
 	public function __construct($name){
@@ -38,11 +39,19 @@ class Quest {
 	}
 }
 $QuestLog = [
-	new Quest('Bat Infestation'),
-	new Quest('Trouble at the Mines'),
-	new Quest('Postal Service')
+	new QuestTemplate('Bat Infestation'),
+	new QuestTemplate('Trouble at the Mines'),
+	new QuestTemplate('Postal Service')
 ];
 $QuestLog[2]->completeQuest();
+
 // dd($QuestLog);
+
+$pdo = connectToDB();
+$statement = $pdo->prepare('select * from questlog');
+
+$statement->execute();
+
+var_dump($statement->fetchAll(PDO::FETCH_CLASS, 'Quest'));
 
 require 'index.template.php';
