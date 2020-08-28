@@ -54,9 +54,9 @@
 	<ul>
 		<?php foreach( $QuestLog as $quest ) : ?>
 			<?php if( $quest->active ) : ?>
-				<li><?= $quest->name; ?></li>
+				<li><?= $quest->origin; ?>: <?= $questlog[0]->name ?></li>
 			<?php else: ?>
-				<li><strike><?= $quest->name; ?></strike></li>
+				<li><strike><?= $quest->origin; ?>: <?= $questlog[0]->name ?></strike></li>
 			<?php endif; ?>
 		<?php endforeach; ?>
 	</ul>
