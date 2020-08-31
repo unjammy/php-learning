@@ -15,7 +15,7 @@
 <body>
 	<header>
 		<h1><?="{$greeting}, {$name}."; ?></h1>
-		<h1><?= "What are we doing today? {$answer}?"; ?></h1>
+		<!--<h1><?= "What are we doing today? {$answer}?"; ?></h1>-->
 	</header>
 	<h2> Character List </h2>
 	<ul>
@@ -60,6 +60,13 @@
 			<?php endif; ?>
 		<?php endforeach; ?>
 	</ul>
+	<h3> Inventory </h3>
+	<nav>
+		<ul>
+			<li><a href="/views/jinx.template.php">Jinx</a></li>
+			<li><a href="/views/lux.template.php">Lux</a></li>
+		</ul>
+	</nav>
 	
 </body>
 </html>

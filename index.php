@@ -1,12 +1,13 @@
 <?php
 
-$query = require 'bootstrap.php';
+$query = require 'core/bootstrap.php';
 require 'functions.php';
 require 'Quest.php';
 
+
 $greeting = 'Hello';
 $name = 'Freeman Bernstein';
-$answer = htmlspecialchars($_GET['value']);
+// $answer = htmlspecialchars($_GET['value']);
 
 
 $toons = [
@@ -61,8 +62,7 @@ $QuestLog[1]->assignOrigin('a miner');
 $QuestLog[2]->assignOrigin('the mayor');
 // dd($QuestLog);
 
-
-$questlog = $query->selectAll('questlog');
-var_dump($questlog);
-
-require 'index.template.php';
+$router = new Router;
+require 'routes.php';
+require Router::load('routes.php')
+	->direct(Request::uri());
