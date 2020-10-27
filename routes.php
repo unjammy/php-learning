@@ -2,6 +2,6 @@
 
 $router->define( [
 	'' => 'controllers/index.php',
-	'jinx' => 'controllers/jinx.php',
-	'lux' => 'controllers/lux.php'
+	'inventory/jinx' => 'controllers/jinx.php',
+	'inventory/lux' => 'controllers/lux.php'
 ]);

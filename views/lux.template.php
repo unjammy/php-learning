@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Lux</title>
-</head>
-<body>
-	<h1>High Elf Cleric</h1>
+<?php require('partials/head.php'); ?>
+<header>
+	<h1>Hello, Lux</h1>
+</header>
 
-</body>
-</html>
+<?php require('partials/footer.php'); ?>

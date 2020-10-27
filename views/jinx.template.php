@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Jinx</title>
-</head>
-<body>
-	<h1>Wood Elf Ranger</h1>
+<?php require('partials/head.php'); ?>
+<header>
+	<h1>Hello, Jinx</h1>
+</header>
 
-</body>
-</html>
+<?php require('partials/footer.php'); ?>
