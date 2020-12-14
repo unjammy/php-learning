@@ -1,9 +1,6 @@
 <?php
 
 $query = require 'core/bootstrap.php';
-require 'functions.php';
-require 'Quest.php';
-
 
 $greeting = 'Hello';
 $name = 'Freeman Bernstein';
@@ -66,3 +63,5 @@ $router = new Router;
 require 'routes.php';
 require Router::load('routes.php')
 	->direct(Request::uri());
+
+var_dump($inventory);
