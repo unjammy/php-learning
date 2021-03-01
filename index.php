@@ -64,4 +64,18 @@ require 'routes.php';
 require Router::load('routes.php')
 	->direct(Request::uri());
 
-var_dump($inventory);
+// array filter exercises
+// <---------------------->
+// var_dump($inventory);
+// var_dump($equipped_items);
+// var_dump($unequipped_items);
+// var_dump($world_drops);
+ // var_dump($names);
+// var_dump($inventory);
+// var_dump($owners);
+// var_dump($modified);
+// <---------------------->
+
+
+
+
